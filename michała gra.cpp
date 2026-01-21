@@ -254,8 +254,13 @@ int main() {
             }
             break;
         case 3:
+        {
+            ofstream czyszczenie("top5.txt", ios::trunc);
+            czyszczenie.close();
+
             cout << "\nDziekuje za gre, " << (imie.empty() ? "Graczu" : imie) << "! Do zobaczenia!\n";
-            break;
+        }
+        break;
         default:
             cout << "Nieznana opcja. Sprobuj ponownie.\n";
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
